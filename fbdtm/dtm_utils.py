@@ -15,7 +15,7 @@ n_topics = 20
 alpha = 0.01
 top_chain_var = 0.005
 
-# destination for result
+# destination of result
 dst = "../result/dtm/all/"
 filename = "maxdf_%.2f_mindf_%.2f_topic_%d_equal_%d_alpha_%.3f_var_%.3f.model" % (
     max_df, min_df, n_topics, n_time, alpha, top_chain_var)
