@@ -17,13 +17,13 @@ top_chain_var = 0.005
 
 # destination of result
 dst = "../result/dtm/all/"
-filename = "maxdf_%.2f_mindf_%.2f_topic_%d_equal_%d_alpha_%.3f_var_%.3f.model" % (
-    max_df, min_df, n_topics, n_time, alpha, top_chain_var)
+filename = "median_mindf_%.2f_topic_%d_equal_%d_alpha_%.3f_var_%.3f.model" % (
+    min_df, n_topics, n_time, alpha, top_chain_var)
 model = DtmModel.load(os.path.join(dst, filename))
 
 n_terms = 20
 
-with codecs.open("../result/dtm/all/topics.csv", 'w', 'utf-8') as f:
+with codecs.open("../result/dtm/all/median_topics.csv", 'w', 'utf-8') as f:
     for k in range(n_topics):
         f.write('Topic %d\n' % (k))
         for ti in range(n_time):
